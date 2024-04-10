@@ -46,6 +46,12 @@ nav a {
     color: #000; /* Optional: Set your link color */
   }
 
+button {
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    cursor: pointer;
+}
+
 .container {
     border: 2px solid white;
     background-color: purple;
@@ -55,17 +61,21 @@ nav a {
     overflow-wrap: break-word;
 }
 
+.editableText {
+    cursor: pointer;
+}
+
 #name {
     font-size: 32px;
 }
 
+/*
 #info {
     position: absolute;
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-/*
 .container {
     border: 2px solid white;
     background-color: purple;
