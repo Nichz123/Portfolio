@@ -113,3 +113,16 @@ function scrollToContent() {
   const secondSection = document.getElementById('secondSection');
   secondSection.scrollIntoView({ behavior: 'smooth' });
 }
+
+function previewContent(id) {
+  //Hide all articles by iterating  over them and setting display to none
+  var articleElements = document.getElementsByTagName("article");
+  for (var i=0; i<articleElements.length; i++){
+    articleElements[i].style.display="none";
+  }
+  document.getElementById(id).style.display='block';
+  var spans = document.getElementById(id).querySelectorAll('span');
+  spans.forEach(span => {
+    applyGlitchEffect(span);
+  });
+}
