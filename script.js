@@ -109,3 +109,7 @@ function resetText() {
 // Add event listener to reset button
 document.getElementById("Reset").addEventListener("click", resetText);
 
+function scrollToContent() {
+  const secondSection = document.getElementById('secondSection');
+  secondSection.scrollIntoView({ behavior: 'smooth' });
+}
