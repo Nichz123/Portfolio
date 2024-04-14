@@ -1,4 +1,20 @@
 
+document.addEventListener("DOMContentLoaded", function() {
+  var element = document.getElementById('first_project');
+
+  // Function to change text-shadow style after the first hover
+  function changeTextShadow() {
+      // Change text-shadow style
+      element.style.textShadow = "0px 0px 8px black, 0px 1px 8px black, 1px 0px 8px black, 0px -1px 8px black, -1px -1px 8px black";
+      // Remove this event listener so it only triggers once
+      element.removeEventListener('mouseenter', changeTextShadow);
+  }
+
+  // Add the event listener for the first hover
+  element.addEventListener('mouseenter', changeTextShadow);
+});
+
+
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 function applyGlitchEffect(element) {
@@ -109,10 +125,37 @@ function resetText() {
 // Add event listener to reset button
 document.getElementById("Reset").addEventListener("click", resetText);
 
-function scrollToContent() {
-  const secondSection = document.getElementById('secondSection');
-  secondSection.scrollIntoView({ behavior: 'smooth' });
+document.addEventListener('DOMContentLoaded', () => {
+  // Apply glitch effects and other setups here
+  const downArrow = document.getElementById('down');
+  const upArrow = document.getElementById('up');
+  if (downArrow) {
+      downArrow.addEventListener('click', () => scrollToContent('secondSection'));
+  }
+  if (upArrow) {
+      upArrow.addEventListener('click', () => scrollToContent('topSection'));
+  }
+});
+
+
+function scrollToContent(id) {
+  // First, let's make sure the element exists
+  const targetSection = document.getElementById(id);
+  if (targetSection) {
+      // If the element exists, we proceed to scroll to it
+      try {
+          targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } catch (error) {
+          console.error("Failed to scroll: ", error);
+          // Fallback to instant scroll if smooth scroll fails
+          targetSection.scrollIntoView(false);
+      }
+  } else {
+      // Log an error if no element was found with the given ID
+      console.error("Element not found: ", id);
+  }
 }
+
 
 function previewContent(id) {
   //Hide all articles by iterating  over them and setting display to none
@@ -126,3 +169,6 @@ function previewContent(id) {
     applyGlitchEffect(span);
   });
 }
+
+
+

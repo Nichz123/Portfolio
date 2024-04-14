@@ -71,6 +71,10 @@ nav li {
     overflow-wrap: break-word;
 }
 
+.empty_container {
+    width: max-content;
+  }
+
 .container {
     background-color: purple;
     background-color: rgba(128, 0, 128, 0.4);
@@ -97,13 +101,20 @@ nav li {
     width: 50px;
     height: 50px;
     cursor: pointer;
+}
+
+#down {
     margin: 0 0 0 60px;
+}
+
+#up {
+    margin: 0 0 60px 0;
 }
 
 .leftright {
     display: flex;
     align-items: center;
-    justify-content:center;
+    justify-content: center;
 }
 
 .left {
@@ -128,6 +139,20 @@ nav li {
 }
 
 .preview:hover {
+    text-shadow:
+    0px 0px 10px magenta,
+    0px 0px 10px magenta;
+}
+
+article {
+    display: none;
+}
+
+#SimCity {
+    display:  block;
+}
+
+#first_project {
     text-shadow:
     0px 0px 10px magenta,
     0px 0px 10px magenta;
