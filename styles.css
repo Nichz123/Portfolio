@@ -85,9 +85,6 @@ nav li {
     background-color: MidnightBlue;
 }
 
-.editableText {
-    cursor: pointer;
-}
 .subtitle, p{
     text-shadow:
     0px 0px 8px black,

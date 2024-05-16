@@ -21,7 +21,7 @@
             <div class="container">
                 <h1><span class="glitch">SimCity</span></h1>
                 <hr>
-                <span class="subtitle glitch">Sophmore group project</span>
+                <span class="subtitle glitch">University Group Project</span>
             </div>
                 <!-- Change this!-->
                 <br>
@@ -29,20 +29,14 @@
                 <br>
             <div class="leftright">
                 <p class="left">
-                    <span class="glitch">Lorem ipsum dolor sit amet, consectetur adipisci </span><br>
-                    <span class="glitch">sed do eiusmod tempor incididunt ut labore et dolore mqu</span><br>
-                    <span class="glitch">r in reprehenderit in volupt esse cillum dolore eu fug</span><br>
-                    <span class="glitch">lla pariatur. Excepteur st cupidatat non proiden</span><br>
-                    <span class="glitch">t, sunt in culpa qui offrunt mollit anim id est laborum.</span><br>
+                    <strong><span class="glitch">Description:</span></strong><br>
+                    <span class="glitch">C++ multifile program simulates city growth given parameters for each zone.</span><br>
+                    <span class="glitch">Project completed in a group of 5.</span><br>
                 </p>
-                <img class="arrow right" id="down" src="ArrowDown1.png" onclick="scrollToContent('secondSection')">
             </div>
         </section>
         <section class="screen"  id="secondSection">
             <div class="leftright" style="height: 100vh; flex-direction: column;">
-                <div>
-                    <img class="arrow" id="up" src="ArrowUp1.png" onclick="scrollToContent('topSection')">
-                </div>
                 <div style="display: grid; grid-template-columns: 1fr 1fr;">
                     <!-- First Column -->
                     <div style="display: flex; flex-direction: column; align-items: center;">
@@ -56,16 +50,11 @@
                             <p class="editableText">. . - R R R . .</p>
                             <p class="editableText">. . - R R R . .</p>
                         </div>
-                        <p>
-                            <span class="glitch button" id="Run">Run</span>
-                            <span class="glitch button" id="Reset">Reset</span>
-                        </p>
                     </div>
                     <!-- Second Column -->
                     <div>
                         <p>
                             <span class="glitch">We started with a configured file of the city.</span><br>
-                            <span class="glitch">Feel free to adjust the file.</span><br>
                             <br>
                                 <span class="glitch">R = Residential</span><br>
                                 <span class="glitch">I = Industrial</span><br>
@@ -74,8 +63,32 @@
                                 <span class="glitch"># = Powerline over a road</span><br>
                                 <span class="glitch">. = (Nothing)</span><br>
                             <br>
-                            <span class="glitch">Pressing "Run" simulates the growth of the city based on a list of parameters.</span><br>
-                            <span class="glitch">Try it out!</span><br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="screen">
+            <div class="leftright" style="height: 100vh; flex-direction: column;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr;">
+                    <!-- First Column -->
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <div class="empty_container">
+                            <p class="editableText">&nbsp;&nbsp;&nbsp;&nbsp;T # T T T&nbsp;&nbsp;</p>
+                            <p class="editableText">2 2 1 - 2 2 T&nbsp;&nbsp;</p>
+                            <p class="editableText">1 1 1 - 1 1 T P</p>
+                            <p class="editableText">I I I - C 1 T&nbsp;&nbsp;</p>
+                            <p class="editableText">- - - - - - # -</p>
+                            <p class="editableText">&nbsp;&nbsp;&nbsp;&nbsp;- 2 3 2 T&nbsp;&nbsp;</p>
+                            <p class="editableText">&nbsp;&nbsp;&nbsp;&nbsp;- 3 3 3&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                            <p class="editableText">&nbsp;&nbsp;&nbsp;&nbsp;- 2 3 2&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                        </div>
+                    </div>
+                    <!-- Second Column -->
+                    <div>
+                        <p>
+                            <span class="glitch">We ended with a timelapsed product of the simulation.</span><br>
+                            <br>
                         </p>
                     </div>
                 </div>

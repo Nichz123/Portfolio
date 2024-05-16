@@ -56,38 +56,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-
-// Get all elements with the class 'editableText'
-const editableTextElements = document.getElementsByClassName("editableText");
-
-// Characters to cycle through
-const newChar = ['.', '-', '#', 'T', 'R', 'I', 'C'];
-
-// Iterate over all editableText elements
-Array.from(editableTextElements).forEach(editableText => {
-  // Split text into spans for each character, excluding spaces
-  editableText.innerHTML = editableText.textContent.split('').map(char =>
-    char === ' '? char : `<span class="editable">${char}</span>`).join('');
-
-  // Set the dataset.value property for each editableText element
-  editableText.dataset.value = editableText.innerHTML;
-
-  // Add click event listener to each span within the current editableText element
-  editableText.querySelectorAll('.editable').forEach(span => {
-    span.addEventListener('click', function() {
-      // Get current character
-      let currentChar = this.textContent;
-      // Find the index of the current character in the newChar array
-      let currentIndex = newChar.indexOf(currentChar);
-      // Determine the next character's index
-      // If the current character is not found or is the last in the array, start from the beginning
-      let nextIndex = currentIndex === -1 || currentIndex === newChar.length - 1? 0 : currentIndex + 1;
-      // Update the character displayed in the span
-      this.textContent = newChar[nextIndex];
-    });
-  });
-});
-
 //Reset event
 const buttonReset = document.getElementById("Reset");
 const regionText = document.getElementsByClassName("editableText");
