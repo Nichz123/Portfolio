@@ -1,0 +1,25 @@
+@media (min-width: 800px) {
+    .navContainer {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.navLinks {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-grow: 1;
+    max-width: 800px;
+    align-items: center;
+
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+}
+
+#name {
+    margin-left: 35px;
+}

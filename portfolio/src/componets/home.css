@@ -1,0 +1,41 @@
+.image-half-screen {
+    height: 60vh;
+    border-radius: 10%;
+}
+
+
+@media (max-width: 800px) {
+    .image-half-screen {
+        margin-top: 10px;
+        width: 50%;
+        height: auto;
+    }
+}
+
+@media (min-width: 800px) {
+    .section-content {
+        margin: 35px;
+
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+.textContainer {
+    padding: 0 40px 0 40px;
+}
+
+h1 {
+    font-family: 'Roboto Serif', serif;
+    font-size: 24px;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+.home-button:hover {
+    cursor: pointer;
+}
