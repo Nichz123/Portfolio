@@ -5,16 +5,46 @@
     justify-content: space-evenly;
 }
 
+.image-item-projects {
+    width: 200px;
+}
+
+
 .section-item-projects {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.image-and-title-projects {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
-    justify-content: flex-start;
-    height: 20vh;
-    text-align: left;
+    justify-content: center;
+    align-items: center;
 }
 
 .image-item-projects {
     border-radius: 10px;
     margin: 10px;
+}
+
+.technology {
+    background-color: white;
+    border-radius: 5px;
+}
+
+.project-tech {
+    background-color: white;
+    color: black;
+    display: inline;
+    margin: 0 10px;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.project-tech:hover {
+    background-color: darkgray;
+    color: white;
 }

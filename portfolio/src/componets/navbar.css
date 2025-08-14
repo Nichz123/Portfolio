@@ -1,16 +1,12 @@
 .navContainer {
     position: fixed;
     top: 0px;
-    width: 100vw;
-}
-
-@media (min-width: 800px) {
-    .navContainer {
-        display: flex;
-        flex-wrap: nowrap;
-        flex-direction: row;
-        justify-content: space-between;
-    }
+    width: 90%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 35px 0 35px;
 }
 
 .navLinks {
@@ -26,10 +22,58 @@
     font-size: 20px;
 }
 
-#name {
-    margin-left: 35px;
-}
-
 .navLink:hover {
     cursor: pointer;
+}
+
+#check:checked ~ .dropdown-content{
+    right: 10px;
+    opacity: 1;
+}
+
+
+.dropdown-content {
+  display: flex;
+  opacity : 0;
+  position: absolute;
+  top: 50px;
+  right: -250px;
+  flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    border: 3px solid;
+    border-color: white;
+    transition: opacity 0.5s, right 0.5s;
+}
+
+#check {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    opacity: 0;
+}
+
+#check:hover {
+    cursor: pointer;
+}
+
+.navlink, .navlink-dropdown {
+  text-decoration: none;
+  color: white;
+}
+
+.navlink-dropdown {
+    font-size: 24px;
+    padding: 5px 100px 5px 15px;
+    text-align: left;
+}
+
+.navlink-dropdown:hover {
+    color: rgba(22, 22, 22);
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.navlink-dropdown:active {
+    color: rgba(22, 22, 22);
+    background-color: rgba(255, 255, 255, 0.5);
 }

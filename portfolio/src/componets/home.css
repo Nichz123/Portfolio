@@ -4,7 +4,7 @@
 }
 
 
-@media (min-width: 800px) {
+@media (min-width: 1200px) {
     #section-content-home {
         display: flex;
         flex-wrap: nowrap;
@@ -12,4 +12,8 @@
         justify-content: space-between;
         align-items: center;
     }
+}
+
+.section-content {
+    margin: 80px 35px 0 35px;
 }
