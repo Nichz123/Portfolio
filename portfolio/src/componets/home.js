@@ -5,7 +5,7 @@ import "./home.css"
 
 function HomeSection() {
     return (
-        <div className="section-content">
+        <div className="section-content" id="section-content-home">
             <div className="section-item">
                 <img className="image-half-screen" src={portrait} alt="Selfie of Nihcolas Bruner at the White Sands National Park"></img>
             </div>
@@ -17,7 +17,7 @@ function HomeSection() {
                 <p>
                     In my portfolio I've listed some of my projects, highlighting my experience. Furthermore, I'm always only a call away!
                 </p>
-                <a><img className="home-button" alt="arrow button" src={arrow}></img></a>
+                <a href="#section-content-projects"><img className="home-button" alt="arrow button" src={arrow}></img></a>
             </div>
         </div>
     )
