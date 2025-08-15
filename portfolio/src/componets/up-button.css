@@ -1,0 +1,19 @@
+#up-button {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 150px;
+    height: 150px;
+    background-image: url("../assets/up-button-1.png");
+    background-size: cover;
+}
+
+#up-button:hover {
+    transition: background-image 0.3s ease-in-out;
+    background-image: url("../assets/up-button-2.png");
+    cursor: pointer;
+}
+
+#up-button:active {
+    background-image: url("../assets/up-button-2.png");
+}

@@ -31,4 +31,23 @@ p {
 
 .button {
   margin-top: 35px;
+  padding-top: 0;
+  padding-bottom: 12px;
+}
+
+@keyframes move-down {
+  from {padding-top: 0; padding-bottom: 12px;}
+  to {padding-top: 12px; padding-bottom: 0;}
+}
+
+@keyframes move-up {
+  from {padding-top: 12px; padding-bottom: 0;}
+  to {padding-top: 0; padding-bottom: 12px;}
+}
+
+.button:hover {
+  animation: move-down 0.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+  animation-direction: alternate;
 }

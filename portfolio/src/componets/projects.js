@@ -2,7 +2,7 @@ import "./projects.css"
 import iconStyx from "../assets/iconStyx.png"
 import iconTorus from"../assets/iconTorus.png"
 import iconWize from "../assets/iconWize.png"
-import arrow from "../assets/arrow.png"
+import arrow from "../assets/arrow.png" 
 
 //1 Styx
 //2 Torus
@@ -21,7 +21,7 @@ const styx = new Project(
     "Styx Baseball Academy",
     "Styx Baseball Academy provides personalized baseball lessons for young athletes in the Dallas-Fort Worth area and I contribute to their goals by developing their website to meet their growing business's needs.",
     iconStyx,
-    ["Wix", "APIs"]
+    ["Wix", "APIs", "Javascript"]
 );
 
 //2nd Project - Torus
@@ -40,6 +40,8 @@ const wize = new Project(
     ["Wordpress"]
 );
 
+var projects = [styx, torus, wize]
+
 function ProjectTechnologies (
     { technologies }
 ) {
@@ -54,30 +56,35 @@ function ProjectTechnologies (
 
 function ProjectScreen (
     {
-        num,
-        icon,
-        title,
-        description,
-        technologies
+        project,
+        index
     }
 ) {
-    var altText = "Logo of " + title
-    var projectId = "project-" + num
-    num++
-    var nextProjectId = "#project-" + num
+    var altText = "Logo of " + project.title
+    var projectId = "project-" + index
+    var nextProjectId
+    //Check if last project
+    if(index === projects.length - 1) {
+        nextProjectId = "#section-content-personal"
+    }
+    else{
+        nextProjectId = "#project-" + (index + 1)
+    }
     return (
         <div className = "section-item-projects" id={projectId}>
             <div className="image-and-title-projects">
-                <img className="image-item-projects" src={icon} alt={altText}></img>
+                <img className="image-item-projects" src={project.icon} alt={altText}></img>
                 <div className="textContainer">
-                    <h1>{title}</h1>
+                    <h1>{project.title}</h1>
                 </div>
             </div>
             <div className="textContainer">
-                <p>{description}</p>
+                <p>{project.description}</p>
             </div>
-            <ProjectTechnologies technologies={technologies}/>
-            <a href={nextProjectId}><img className="button" alt="arrow button" src={arrow}></img></a>
+            <ProjectTechnologies technologies={project.technologies}/>
+            <div>
+                <a href={nextProjectId}><img className="button" alt="arrow button" src={arrow}></img></a>
+            </div>
         </div>
     )
 }
@@ -85,9 +92,9 @@ function ProjectScreen (
 function ProjectsSection() {
     return (
         <div className = "section-content" id="section-content-projects">
-            <ProjectScreen num="1" icon={styx.icon} title={styx.title} description={styx.description} technologies={styx.technologies}/>
-            <ProjectScreen num="2" icon={torus.icon} title={torus.title} description={torus.description} technologies={torus.technologies}/>
-            <ProjectScreen num="3" icon={wize.icon} title={wize.title} description={wize.description} technologies={wize.technologies}/>
+            { projects?.map((project, index) => (
+                <ProjectScreen project={project} index={index}/>
+            ))}
         </div>
     )
 };
